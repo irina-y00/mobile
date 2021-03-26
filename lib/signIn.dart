@@ -6,23 +6,23 @@ class SignIn extends StatelessWidget {
   String _password;
   final _sizeTextBlack = const TextStyle(fontSize: 20.0, color: Colors.black);
   final _sizeTextWhite = const TextStyle(fontSize: 20.0, color: Colors.white);
-  final formKey = new GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
   BuildContext _context;
 
   @override
   Widget build(BuildContext context) {
     _context = context;
-    return new MaterialApp(
-      home: new Scaffold(
-        body: new Center(
-          child: new Form(
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Form(
               key: formKey,
-              child: new Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Container(
-                    child: new TextFormField(
-                      decoration: new InputDecoration(labelText: "Email"),
+                  Container(
+                    child: TextFormField(
+                      decoration: InputDecoration(labelText: "Email"),
                       keyboardType: TextInputType.emailAddress,
                       maxLines: 1,
                       style: _sizeTextBlack,
@@ -35,9 +35,9 @@ class SignIn extends StatelessWidget {
                       right: 10.0,
                     ),
                   ),
-                  new Container(
-                    child: new TextFormField(
-                      decoration: new InputDecoration(labelText: "Password"),
+                  Container(
+                    child: TextFormField(
+                      decoration: InputDecoration(labelText: "Password"),
                       obscureText: true,
                       maxLines: 1,
                       validator: (val) =>
